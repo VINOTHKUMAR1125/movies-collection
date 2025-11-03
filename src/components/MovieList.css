@@ -1,0 +1,11 @@
+ .movie-list {
+  margin-top: 20px;
+}
+
+.movie-card {
+  transition: transform 0.2s ease;
+}
+
+.movie-card:hover {
+  transform: scale(1.03);
+}
