@@ -1,17 +1,81 @@
- ..header {
+body {
+  background: radial-gradient(circle at top, #0d0d0d, #000);
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* ---------- Main Container ---------- */
+.MuiContainer-root {
+  padding-top: 50px !important;
+  padding-bottom: 80px !important;
   text-align: center;
-  margin: 30px 0;
-  font-weight: bold;
 }
 
-.movie-list {
-  margin-top: 20px;
+/* ---------- Header ---------- */
+.header {
+  font-size: 2.5rem !important;
+  font-weight: 700 !important;
+  text-align: center;
+  margin-bottom: 40px !important;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #ff007a, #ffcc00, #00d4ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 2px;
+  position: relative;
 }
 
-.movie-card {
-  transition: transform 0.2s ease;
+.header::after {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 4px;
+  background: linear-gradient(90deg, #ff007a, #00d4ff);
+  margin: 10px auto 0 auto;
+  border-radius: 2px;
 }
 
-.movie-card:hover {
-  transform: scale(1.03);
+/* ---------- Dropdown ---------- */
+.MuiFormControl-root {
+  background-color: #1a1a1a !important;
+  border-radius: 8px !important;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+}
+
+.MuiInputLabel-root {
+  color: #bbbbbb !important;
+}
+
+.MuiOutlinedInput-root {
+  fieldset {
+    border-color: #333 !important;
+  }
+}
+
+.MuiOutlinedInput-notchedOutline {
+  border-color: #444 !important;
+}
+
+.MuiSelect-select {
+  color: #fff !important;
+  padding: 12px !important;
+}
+
+.MuiSelect-icon {
+  color: #ff007a !important;
+}
+
+/* ---------- Loader & Alerts ---------- */
+.MuiCircularProgress-root {
+  color: #ff007a !important;
+  margin-top: 40px !important;
+}
+
+.MuiAlert-root {
+  margin-top: 20px !important;
+  font-size: 1rem !important;
+  font-weight: 500 !important;
 }
