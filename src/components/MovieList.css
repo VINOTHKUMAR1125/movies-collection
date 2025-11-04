@@ -1,11 +1,79 @@
- .movie-list {
-  margin-top: 20px;
+body {
+  background-color: #0d0d0d;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.movie-list {
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(180deg, #0d0d0d 0%, #111111 100%);
 }
 
 .movie-card {
-  transition: transform 0.2s ease;
+  background-color: #1a1a1a !important;
+  border-radius: 20px !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
 }
 
 .movie-card:hover {
-  transform: scale(1.03);
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(255, 0, 100, 0.3);
+}
+
+.movie-card img {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  height: 350px;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.movie-card:hover img {
+  opacity: 0.85;
+}
+
+.MuiCardContent-root {
+  text-align: center;
+  background-color: #121212;
+  padding: 16px !important;
+}
+
+.MuiTypography-h6 {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  margin-bottom: 5px;
+  font-size: 1.05rem !important;
+}
+
+.MuiTypography-body2 {
+  color: #bbbbbb !important;
+  font-size: 0.9rem !important;
+}
+
+.movie-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, transparent 60%, rgba(0, 0, 0, 0.8) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 20px;
+}
+
+.movie-card:hover::before {
+  opacity: 1;
+}
+
+.movie-card:hover .MuiTypography-h6 {
+  color: #ff0066 !important;
 }
